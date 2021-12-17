@@ -1280,11 +1280,9 @@ class PlayState extends MusicBeatState
 
 		var mnum:Float = 3;
 
-		videoSprite = new FlxSprite(0, 0).loadGraphic(data);
+		videoSprite = new FlxSprite(-470, -30).loadGraphic(data);
 
-	  videoSprite.width = FlxG.width;
-    videoSprite.height = FlxG.height;
-		videoSprite.updateHitbox();
+		videoSprite.setGraphicSize(Std.int(videoSprite.width * 1.2 * mnum));
 
 
     	add(videoSprite);
