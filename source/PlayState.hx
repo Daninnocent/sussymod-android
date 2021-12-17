@@ -1390,9 +1390,9 @@ class PlayState extends MusicBeatState
 		switch(songName)
 		{
 			case 'mekatsune':
-				backgroundVideo('mekatsune')
+				backgroundVideo('mekatsune');
 			case 'fnfgf':
-				backgroundVideo('fnfgf')
+				backgroundVideo('fnfgf');
 		}
 
 		#if mobileC
