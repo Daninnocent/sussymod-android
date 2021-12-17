@@ -62,6 +62,8 @@ using StringTools;
 
 class PlayState extends MusicBeatState
 {
+	public static var instance:PlayState = null;
+
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
@@ -258,6 +260,8 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		instance = this;
+
 		/*#if MODS_ALLOWED
 		Paths.destroyLoadedImages(resetSpriteCache);
 		#end*/
@@ -1235,7 +1239,7 @@ class PlayState extends MusicBeatState
 		}
 
 		var ourSource:String = Main.path + "dontDelete.webm";
-		WebmPlayer.SKIP_STEP_LIMIT = 90;
+		//WebmPlayer.SKIP_STEP_LIMIT = 90;
 		var str1:String = "WEBM SHIT"; 
 		webmHandler = new WebmHandler();
 		webmHandler.source(ourSource);
@@ -1387,6 +1391,7 @@ class PlayState extends MusicBeatState
 
 	public function startCountdown():Void
 	{
+		var songName:String = Paths.formatToSongPath(SONG.song);
 		switch(songName)
 		{
 			case 'mekatsune':
