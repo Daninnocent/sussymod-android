@@ -33,6 +33,13 @@ class PauseSubState extends MusicBeatSubstate
 	{
 		super();
 		menuItems = menuItemsOG;
+		
+		if (PlayState.instance.useVideo)
+		{
+			menuItems.remove("Resume");
+			if (GlobalVideo.get().playing)
+				GlobalVideo.get().pause();
+		}
 
 		for (i in 0...CoolUtil.difficultyStuff.length) {
 			var diff:String = '' + CoolUtil.difficultyStuff[i][0];
