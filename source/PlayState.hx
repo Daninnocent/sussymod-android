@@ -1951,9 +1951,9 @@ class PlayState extends MusicBeatState
 		vocals.play();
 	}
 
-	public static var useVideo = false;
+	public var useVideo = false;
 
-	public static var removedVideo = false;
+	public var removedVideo = false;
 
 	public var stopUpdate = false;
 
