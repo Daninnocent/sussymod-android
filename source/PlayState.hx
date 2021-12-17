@@ -1282,9 +1282,9 @@ class PlayState extends MusicBeatState
 
 		videoSprite = new FlxSprite(0, 0).loadGraphic(data);
 
-	  video.width = FlxG.width;
-    video.height = FlxG.height;
-		video.updateHitbox();
+	  videoSprite.width = FlxG.width;
+    videoSprite.height = FlxG.height;
+		videoSprite.updateHitbox();
 
 
     	add(videoSprite);
