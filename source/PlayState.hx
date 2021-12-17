@@ -335,7 +335,7 @@ class PlayState extends MusicBeatState
 				case 'mekatsune':
 					curStage = 'welcometotheunderground'
 			    case 'fnfgf':
-					curStage = 'funkin'
+					curStage = 'funkin';
 				default:
 					curStage = 'stage';
 			}
