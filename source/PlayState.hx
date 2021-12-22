@@ -1278,10 +1278,10 @@ class PlayState extends MusicBeatState
 
 		var data = webmHandler.webm.bitmapData;
 
-		var mnum:Float = 2;
+		var mnum:Float = 2.5;
 
 
-		videoSprite = new FlxSprite(-500, 1500).loadGraphic(data);
+		videoSprite = new FlxSprite(-380, 1400).loadGraphic(data);
 
 		videoSprite.setGraphicSize(Std.int(videoSprite.width * 1.2 * mnum));
 
